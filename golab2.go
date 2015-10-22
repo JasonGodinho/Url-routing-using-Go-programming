@@ -27,7 +27,7 @@ func hellopost(rw http.ResponseWriter, req *http.Request, p httprouter.Params) {
 	err := s3.Decode(&myjson3)
 
 	var myJsonresp2 MyJsonResponse
-	myJsonresp2.Greeting = "Hello " + myjson3.Name + "!"
+	myJsonresp2.Greeting = "Hello, " + myjson3.Name + "!"
 	b2, err := json.Marshal(myJsonresp2)
 	if err != nil {
 	}
